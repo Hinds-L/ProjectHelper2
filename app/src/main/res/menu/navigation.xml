@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/navigation_quotes"
+    android:icon="@drawable/quotes"
+    android:title="@string/title_quote"/>
+
+  <item
+    android:id="@+id/navigation_invoice"
+    android:icon="@drawable/invoice"
+    android:title="@string/title_invoice"/>
+
+  <item
+    android:id="@+id/navigation_job"
+    android:icon="@drawable/job"
+    android:title="@string/title_job"/>
+
+</menu>
