@@ -14,12 +14,21 @@ import com.bluecirclesquare.projecthelper2.model.entity.Invoice;
 import java.text.DateFormat;
 import java.util.List;
 
+/**
+ * This is the InvoiceViewAdapter.class that uses RecyclerView to populate list items
+ */
+
 public class InvoiceViewAdapter extends RecyclerView.Adapter<InvoiceViewAdapter.Holder> {
 
 
   private final Context context;
   private final List<Invoice> invoices;
 
+  /**
+   * Gets the list of invoices from the adapter
+   * @param context
+   * @param invoices
+   */
   public InvoiceViewAdapter(Context context, List<Invoice> invoices) {
     this.context = context;
     this.invoices = invoices;
@@ -43,6 +52,9 @@ public class InvoiceViewAdapter extends RecyclerView.Adapter<InvoiceViewAdapter.
     return invoices.size();
   }
 
+  /**
+   * Holds the fields that will be populated by the recyclerview
+   */
   public class Holder extends RecyclerView.ViewHolder {
 
     private Invoice invoice;
@@ -50,6 +62,10 @@ public class InvoiceViewAdapter extends RecyclerView.Adapter<InvoiceViewAdapter.
     private TextView invoiced;
     private TextView price;
     private TextView address;
+
+    /**
+     * References the location of items
+     */
 
     public Holder(@NonNull View itemView) {
       super(itemView);
@@ -62,7 +78,10 @@ public class InvoiceViewAdapter extends RecyclerView.Adapter<InvoiceViewAdapter.
     //  @Override
     //   public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo)}
 
-
+    /**
+     * Sets the text for the items listed in the invoice class
+     * @param invoice
+     */
     private void bind(Invoice invoice) {
       DateFormat format = getDateFormat(context);
       this.invoice = invoice;

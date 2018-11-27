@@ -15,6 +15,10 @@ import com.bluecirclesquare.projecthelper2.model.entity.Job;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is the JobsFragment.class that is used for populating the recyclerview items in a layout
+ */
+
 public class JobsFragment extends Fragment {
 
   private JobViewAdapter adapter;
@@ -39,6 +43,9 @@ public class JobsFragment extends Fragment {
     return view;
   }
 
+  /**
+   * Gives the ability to clear the view with new content
+   */
   private class QueryTask extends AsyncTask<Void, Void, List<Job>> {
 
     @Override

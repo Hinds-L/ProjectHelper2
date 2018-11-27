@@ -15,8 +15,9 @@ import com.bluecirclesquare.projecthelper2.model.entity.Invoice;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-This is the InvoicesFragment class that inflates the view to populate the invoice database.
+/**
+This is the InvoicesFragment class that inflates the view to populate the items held by
+ the recyclerview
  */
 
 public class InvoicesFragment extends Fragment {
@@ -43,6 +44,9 @@ public class InvoicesFragment extends Fragment {
     return view;
   }
 
+  /**
+   * Clears the previous content on the screen
+   */
   private class QueryTask extends AsyncTask<Void, Void, List<Invoice>> {
 
     @Override

@@ -10,6 +10,10 @@ import android.arch.persistence.room.Update;
 import com.bluecirclesquare.projecthelper2.model.entity.Invoice;
 import java.util.List;
 
+/**
+ * This is the dao InvoiceDao.class that is used for accessing invoice records
+ */
+
 @Dao
 public interface InvoiceDao {
 

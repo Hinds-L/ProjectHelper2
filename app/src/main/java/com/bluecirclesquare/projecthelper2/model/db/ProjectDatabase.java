@@ -21,6 +21,11 @@ import java.util.Calendar;
 import java.util.Date;
 
 
+/**
+ * This is the database ProjectDatabase.class that will get and set the fields that the user
+ * will fill in
+ */
+
 @Database(entities = {Invoice.class, Job.class, Quote.class}, version = 1, exportSchema = true)
 @TypeConverters(Converters.class)
 public abstract class ProjectDatabase extends RoomDatabase {
@@ -33,6 +38,11 @@ public abstract class ProjectDatabase extends RoomDatabase {
   private Calendar calendar = null;
 
 
+  /**
+   * Retrieves an instance of the database
+   * @param context
+   * @return instance
+   */
   public static synchronized ProjectDatabase getInstance(Context context) {
 
     if (instance == null) {
@@ -48,23 +58,43 @@ public abstract class ProjectDatabase extends RoomDatabase {
     return instance;
   }
 
+  /**
+   * Al
+   * @param context
+   */
+
   public static synchronized void forgetInstance(Context context) {
 
     instance = null;
 
   }
 
+  /**
+   * Gets an instance of the invoicedao.class
+   */
   public abstract InvoiceDao getInvoiceDao();
 
+  /**
+   * Gets an instance of the jobdao.class
+   */
   public abstract JobDao getJobDao();
 
+  /**
+   * Gets an instance of the quoteedao.class
+   */
   public abstract QuoteDao getQuoteDao();
 
+  /**
+   * Calls the room database
+   */
   private static class Callback extends RoomDatabase.Callback {
 
 
     private Context context;
 
+    /**
+     * Callback context
+     */
 
     public Callback(Context context) {
 
@@ -90,6 +120,10 @@ public abstract class ProjectDatabase extends RoomDatabase {
     }
   }
 
+  /**
+   *
+   * Prepopulate AsyncTask with context
+   */
   private static class PrepopulateTask extends AsyncTask<Void, Void, Void> {
 
     private Context context;
@@ -103,7 +137,6 @@ public abstract class ProjectDatabase extends RoomDatabase {
 
 
     @Override
-
     protected Void doInBackground(Void... voids) {
 
       ProjectDatabase db = getInstance(context);
@@ -137,6 +170,9 @@ public abstract class ProjectDatabase extends RoomDatabase {
 
   }
 
+  /**
+   * Convert date from long into a time and long from date
+   */
   public static class Converters {
 
     @TypeConverter

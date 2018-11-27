@@ -11,11 +11,18 @@ import com.bluecirclesquare.projecthelper2.R;
 import com.bluecirclesquare.projecthelper2.model.entity.Job;
 import java.util.List;
 
+/**
+ * This is the JobViewAdapter.class that is used for populating fields in a viewholder
+ */
+
 public class JobViewAdapter extends RecyclerView.Adapter<JobViewAdapter.Holder> {
 
   private final Context context;
   private final List<Job> jobs;
 
+  /**
+   * gets the context and list of jobs from the viewadapter
+   */
   public JobViewAdapter(Context context, List<Job> jobs){
     this.context = context;
     this.jobs = jobs;
@@ -38,12 +45,19 @@ public class JobViewAdapter extends RecyclerView.Adapter<JobViewAdapter.Holder> 
     return jobs.size();
   }
 
+  /**
+   * Populates fields for  viewholder
+   */
+
   public class Holder extends RecyclerView.ViewHolder{
     private Job job;
     private TextView jobNumber;
     private TextView jobDescription;
     private TextView jobAddress;
 
+    /**
+     * References location of viewfields
+     */
     public Holder(@NonNull View itemView) {
       super(itemView);
       jobNumber = itemView.findViewById(R.id.job_number);
@@ -55,6 +69,10 @@ public class JobViewAdapter extends RecyclerView.Adapter<JobViewAdapter.Holder> 
  //   public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 //
   //  }
+
+    /**
+     * Sets the fields in view
+     */
 private void bind(Job job){
       this.job = job;
       jobNumber.setText(job.getJobNumber());

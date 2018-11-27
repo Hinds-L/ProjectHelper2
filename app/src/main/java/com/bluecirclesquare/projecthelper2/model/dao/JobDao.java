@@ -8,6 +8,10 @@ import android.arch.persistence.room.Update;
 import com.bluecirclesquare.projecthelper2.model.entity.Job;
 import java.util.List;
 
+/**
+ * This is the dao JobDao.class that is used for accessing job records
+ */
+
 @Dao
 public interface JobDao {
 

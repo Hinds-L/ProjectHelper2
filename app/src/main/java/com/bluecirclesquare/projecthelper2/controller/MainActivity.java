@@ -16,6 +16,10 @@ import com.bluecirclesquare.projecthelper2.view.InvoicesFragment;
 import com.bluecirclesquare.projecthelper2.view.JobsFragment;
 import com.bluecirclesquare.projecthelper2.view.QuotesFragment;
 
+/**
+* Main Activity class that populates the main view after sign in.
+*/
+
 public class MainActivity extends AppCompatActivity implements
     OnNavigationItemSelectedListener {
 
@@ -33,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements
     navigation.setSelectedItemId(R.id.navigation_quotes);
 
 
+    /**
+    *Allows user to write emails
+     */
 //    FloatingActionButton emailButton = findViewById(R.id.create_email);
 //    emailButton.setOnClickListener(new View.OnClickListener(){
 
