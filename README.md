@@ -68,5 +68,5 @@ Instructions for building the app.
 In github. select the button that says "clone or download" choose which option you want to use
 In IntelliJ/Android studio choose "checkout from version control" 
 
-[Basic instructions for using the app]()
+[Basic instructions for using the app](BasicInstructionsRunApp.pdf)
 
