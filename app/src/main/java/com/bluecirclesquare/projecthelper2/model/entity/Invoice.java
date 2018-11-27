@@ -8,6 +8,9 @@ import android.support.annotation.NonNull;
 
 import java.util.Date;
 
+/*
+This is the Invoice class with the entity fields for creating the invoice database.
+ */
 @Entity(
     foreignKeys = {
         @ForeignKey(entity = Job.class, parentColumns = "job_id", childColumns = "job_id", onDelete = ForeignKey.RESTRICT)

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="horizontal">
+
+
+  <TextView
+  android:layout_width="0dp"
+  android:layout_height="wrap_content"
+  android:layout_weight="0.15"
+  android:textAlignment="textStart"
+    android:id="@+id/invoice_id"
+  android:textStyle="bold"
+  android:fontFamily="sans-serif"/>
+
+  <TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/date_invoiced"
+    android:layout_weight="0.15"
+    android:textAlignment="center"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif"/>
+
+  <TextView
+    android:id="@+id/price"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:layout_weight="0.15"
+    android:textAlignment="textEnd"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif"
+    />
+
+  <TextView
+    android:id="@+id/job_address"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.55"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif"
+    />
+
+
+</LinearLayout>

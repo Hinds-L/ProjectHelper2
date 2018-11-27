@@ -12,36 +12,36 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import com.bluecirclesquare.projecthelper2.R;
-import com.bluecirclesquare.projecthelper2.view.InvoiceFragment;
-import com.bluecirclesquare.projecthelper2.view.JobFragment;
-import com.bluecirclesquare.projecthelper2.view.QuoteFragment;
+import com.bluecirclesquare.projecthelper2.view.InvoicesFragment;
+import com.bluecirclesquare.projecthelper2.view.JobsFragment;
+import com.bluecirclesquare.projecthelper2.view.QuotesFragment;
 
 public class MainActivity extends AppCompatActivity implements
     OnNavigationItemSelectedListener {
 
   private TextView fragmentTitle;
-  private FloatingActionButton emailButton;
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     setContentView(R.layout.activity_main);
-    fragmentTitle = findViewById(R.id.fragment_title);
+//    fragmentTitle = findViewById(R.id.fragment_title);
     BottomNavigationView navigation = findViewById(R.id.navigation);
     navigation.setOnNavigationItemSelectedListener(this);
     navigation.setSelectedItemId(R.id.navigation_quotes);
 
 
-    emailButton = findViewById(R.id.create_email);
-    emailButton.setOnClickListener(new View.OnClickListener(){
+//    FloatingActionButton emailButton = findViewById(R.id.create_email);
+//    emailButton.setOnClickListener(new View.OnClickListener(){
 
-    @Override
-    public void onClick(View view) {
-      Snackbar.make(view, "Email", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-    }
-                                   }
-    );
+//    @Override
+//    public void onClick(View view) {
+//      Snackbar.make(view, "Email", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+//    }
+//                                   }
+//    );
   }
 
     @Override
@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity implements
       Fragment fragment = null;
   switch (item.getItemId()) {
         case R.id.navigation_quotes:
-          fragment = new QuoteFragment();
+          fragment = new QuotesFragment();
           break;
         case R.id.navigation_invoice:
-          fragment = new InvoiceFragment();
+          fragment = new InvoicesFragment();
           break;
         case R.id.navigation_job:
-          fragment = new JobFragment();
+          fragment = new JobsFragment();
           break;
         default:
           handled = false;
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements
       }
       if (handled) {
 
-        fragmentTitle.setText(item.getTitle());
+        //fragmentTitle.setText(item.getTitle());
 
         if (fragment != null) {
           getSupportFragmentManager().beginTransaction()
