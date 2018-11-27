@@ -55,7 +55,7 @@ Links to the wireframes and user stories for your app.
 
 Links to the up-to-date ERD and DDL for your app’s data model.
 [PHERD](PHerd.pdf)
-[PHDDL](PHddl.pdf)
+[PHDDL](PHddl2.pdf)
 
 A link to generated Javadoc HTML pages in your repository (see below).
 
