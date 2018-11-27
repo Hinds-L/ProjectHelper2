@@ -21,6 +21,7 @@ import java.util.Date;
 /**
  * Holds the fields necessary to populate the invoice database
  */
+
 public class Invoice {
 
   @ColumnInfo(name = "invoice_id")
