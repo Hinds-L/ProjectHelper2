@@ -28,6 +28,8 @@
   <string name="enter_quote_id">Enter Quote Id</string>
   <string name="enter_quote_number">Enter Quote Number</string>
   <string name="add_contact">Add Contact</string>
+  <string name="enter_job_id">Job Id</string>
+  <string name="enter_invoice_id">Enter Invoice Id</string>
 
 
 </resources>
