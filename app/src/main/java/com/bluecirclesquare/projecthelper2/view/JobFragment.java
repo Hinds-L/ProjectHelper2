@@ -22,12 +22,12 @@ public class JobFragment extends DialogFragment {
     View view = inflater.inflate(R.layout.fragment_job, null);
     builder.setView(view);
     builder.setPositiveButton("OK", (dialog, id) -> {
-      Job job = new Job();
-      job.setAddress();
-      job.setEvent();
-      job.setDescription();
-      job.setJobNumber();
-      job.setId();
+//      Job job = new Job();
+//      job.setAddress();
+//      job.setEvent();
+//      job.setDescription();
+//      job.setJobNumber();
+//      job.setId();
       dialog.dismiss();
       //TODO get all values in the dialog and set them in the job
 

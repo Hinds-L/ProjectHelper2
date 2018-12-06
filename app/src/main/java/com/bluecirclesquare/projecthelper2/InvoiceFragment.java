@@ -28,12 +28,12 @@ public class InvoiceFragment extends DialogFragment {
     View view = inflater.inflate(R.layout.fragment_invoice, null);
     builder.setView(view);
     builder.setPositiveButton("OK", (dialog, id) -> {
-      Invoice invoice = new Invoice();
-      invoice.setAddress();
-      invoice.setPrice();
-      invoice.setDateCompleted();
-      invoice.setDateInvoiced();
-      invoice.setId();
+//      Invoice invoice = new Invoice();
+//      invoice.setAddress();
+//      invoice.setPrice();
+//      invoice.setDateCompleted();
+//      invoice.setDateInvoiced();
+//      invoice.setId();
       dialog.dismiss();
       //TODO get all values in the dialog and set them in the job
 

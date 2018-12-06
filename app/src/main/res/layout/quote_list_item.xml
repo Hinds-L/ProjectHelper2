@@ -37,4 +37,11 @@
     android:paddingHorizontal="4dp"
     />
 
+  <TextView
+    android:id="@+id/quote_id_for_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    />
+
 </LinearLayout>

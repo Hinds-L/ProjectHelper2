@@ -24,6 +24,9 @@ public interface QuoteDao {
     @Query("SELECT * FROM Quote ORDER BY event DESC")
     List<Quote> select();
 
+    @Query("SELECT *  FROM Quote WHERE quote_id = :quoteId")
+    Quote get(Long quoteId);
+
     @Update
     int update(Quote quote);
 
