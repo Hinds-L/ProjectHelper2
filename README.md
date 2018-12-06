@@ -57,8 +57,7 @@ Links to the up-to-date ERD and DDL for your app’s data model.
 [PHERD](PHerd.pdf)
 [PHDDL](PHddl2.pdf)
 
-Javadoc HTML pages in your repository (see below).
-Part of intellij commit.
+[Javadoc HTML pages in your repository](docs/api)
 
 Links to all applicable licenses.
 [https://github.com/facebook/stetho/blob/master/LICENSE](https://github.com/facebook/stetho/blob/master/LICENSE)
