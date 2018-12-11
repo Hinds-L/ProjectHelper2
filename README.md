@@ -62,6 +62,7 @@ I will be working on completing the Dialog fragments with their corresponding ja
 
  * Links to all applicable licenses.
 [https://github.com/facebook/stetho/blob/master/LICENSE](https://github.com/facebook/stetho/blob/master/LICENSE)
+[Link to Project Helper License](LICENSE.MD)
 
 
 * [Instructions for building the app.](PHelperBIn.pdf)
