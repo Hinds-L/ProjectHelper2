@@ -23,6 +23,9 @@ public interface InvoiceDao {
   @Insert
   List<Long> insert(List<Invoice> invoice);
 
+  @Query("SELECT * FROM Invoice WHERE invoice_id = :invoiceId")
+  Invoice get(long invoiceId);
+
   @Query("SELECT * FROM Invoice ORDER BY invoiced DESC")
   List<Invoice> select();
 

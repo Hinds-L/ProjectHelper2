@@ -1,5 +1,6 @@
 package com.bluecirclesquare.projecthelper2.model.dao;
 
+
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -14,6 +15,9 @@ import java.util.List;
 
 @Dao
 public interface JobDao {
+
+  @Query("SELECT * FROM Job WHERE job_id = :jobId")
+  Job get(long jobId);
 
   @Insert
   long insert(Job job);

@@ -5,7 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  tools:context=".view.QuoteFragment">
+  tools:context=".view.InvoiceFragment">
 
   <android.support.design.widget.TextInputLayout
     android:layout_width="0dp"
@@ -16,7 +16,7 @@
     app:hintAnimationEnabled="true"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@+id/invoice_id"
+    app:layout_constraintEnd_toStartOf="@+id/job_id_layout"
     >
 
     <android.support.design.widget.TextInputEditText
@@ -33,17 +33,17 @@
   <android.support.design.widget.TextInputLayout
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:id="@+id/quote_number_layout"
+    android:id="@+id/job_id_layout"
     app:hintEnabled="true"
     app:hintAnimationEnabled="true"
-    android:hint="@string/enter_quote_number"
-    app:layout_constraintStart_toEndOf="@id/quote_id_layout"
+    android:hint="@+id/job_number"
+    app:layout_constraintStart_toEndOf="@id/invoice_id_layout"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintEnd_toEndOf="parent">
 
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/quote_number"
+      android:id="@+id/job_id"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"
@@ -56,21 +56,21 @@
   <android.support.design.widget.TextInputLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/input_contact_layout"
+    android:id="@+id/input_date_completed_layout"
     app:hintEnabled="true"
-    android:hint="@string/add_contact"
+    android:hint="@string/date_completed"
     app:hintAnimationEnabled="true"
-    app:layout_constraintTop_toBottomOf="@id/quote_number_layout"
+    app:layout_constraintTop_toBottomOf="@id/invoice_id_layout"
 
     >
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/contact"
+      android:id="@+id/date_completed"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"
       android:textStyle="bold"
-      android:inputType="textPersonName"
+      android:inputType="date"
 
       />
 
@@ -79,16 +79,16 @@
   <android.support.design.widget.TextInputLayout
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:id="@+id/input_amount_layout"
+    android:id="@+id/input_invoice_price_layout"
     app:hintEnabled="true"
     app:hintAnimationEnabled="true"
-    android:hint="@string/add_amount"
+    android:hint="@string/enter_price"
     app:layout_constraintTop_toBottomOf="@id/input_contact_layout"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toStartOf="@+id/input_date_layout">
+    app:layout_constraintEnd_toStartOf="@+id/input_date_invoiced_layout">
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/amount"
+      android:id="@+id/invoice_price"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"
@@ -101,16 +101,16 @@
   <android.support.design.widget.TextInputLayout
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:id="@+id/input_date_layout"
+    android:id="@+id/input_date_invoiced_layout"
     app:hintEnabled="true"
     app:hintAnimationEnabled="true"
     android:hint="@string/add_date"
-    app:layout_constraintTop_toBottomOf="@id/input_contact_layout"
+    app:layout_constraintTop_toBottomOf="@id/input_invoice_price_layout"
     app:layout_constraintStart_toEndOf="@id/input_amount_layout"
     app:layout_constraintEnd_toStartOf="@+id/input_address_layout">
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/event"
+      android:id="@+id/date_invoiced"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"
@@ -137,29 +137,6 @@
       android:fontFamily="sans-serif"
       android:textStyle="bold"
       android:inputType="textPostalAddress"
-      />
-
-  </android.support.design.widget.TextInputLayout>
-
-  <android.support.design.widget.TextInputLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/input_description_layout"
-    app:hintEnabled="true"
-    android:hint="@string/add_description"
-    app:hintAnimationEnabled="true"
-    app:layout_constraintTop_toBottomOf="@id/input_address_layout"
-
-    >
-
-    <android.support.design.widget.TextInputEditText
-      android:id="@+id/description"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:fontFamily="sans-serif"
-      android:textStyle="bold"
-      android:inputType="textCapSentences|textAutoCorrect"
-
       />
 
   </android.support.design.widget.TextInputLayout>

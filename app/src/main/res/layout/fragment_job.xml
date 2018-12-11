@@ -5,12 +5,12 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  tools:context=".JobFragment">
+  tools:context="view.JobFragment">
 
   <android.support.design.widget.TextInputLayout
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:id="@+id/quote_id_layout"
+    android:id="@+id/job_id_layout"
     app:hintEnabled="true"
     android:hint="@string/enter_job_id"
     app:hintAnimationEnabled="true"
@@ -43,7 +43,7 @@
 
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/quote_number"
+      android:id="@+id/quote_id"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"
@@ -56,21 +56,21 @@
   <android.support.design.widget.TextInputLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/input_contact_layout"
+    android:id="@+id/input_job_number_layout"
     app:hintEnabled="true"
-    android:hint="@string/add_contact"
+    android:hint="@string/job_number"
     app:hintAnimationEnabled="true"
     app:layout_constraintTop_toBottomOf="@id/quote_number_layout"
 
     >
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/contact"
+      android:id="@+id/job_number"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"
       android:textStyle="bold"
-      android:inputType="textPersonName"
+      android:inputType="number"
 
       />
 
@@ -79,21 +79,21 @@
   <android.support.design.widget.TextInputLayout
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:id="@+id/input_amount_layout"
+    android:id="@+id/input_event_layout"
     app:hintEnabled="true"
     app:hintAnimationEnabled="true"
-    android:hint="@string/add_amount"
+    android:hint="@string/enter_date"
     app:layout_constraintTop_toBottomOf="@id/input_contact_layout"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/input_date_layout">
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/amount"
+      android:id="@+id/event"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"
       android:textStyle="bold"
-      android:inputType="numberDecimal"
+      android:inputType="date"
       />
 
   </android.support.design.widget.TextInputLayout>
@@ -101,16 +101,16 @@
   <android.support.design.widget.TextInputLayout
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:id="@+id/input_date_layout"
+    android:id="@+id/input_job_address_layout"
     app:hintEnabled="true"
     app:hintAnimationEnabled="true"
-    android:hint="@string/add_date"
+    android:hint="@string/enter_address"
     app:layout_constraintTop_toBottomOf="@id/input_contact_layout"
     app:layout_constraintStart_toEndOf="@id/input_amount_layout"
     app:layout_constraintEnd_toStartOf="@+id/input_address_layout">
 
     <android.support.design.widget.TextInputEditText
-      android:id="@+id/event"
+      android:id="@+id/job_address"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="sans-serif"

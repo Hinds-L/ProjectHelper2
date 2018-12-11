@@ -18,6 +18,7 @@ public interface QuoteDao {
 
     @Insert
     long insert(Quote quote);
+
     @Insert
     List<Long> insert(List<Quote> quotes);
 

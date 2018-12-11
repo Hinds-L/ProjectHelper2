@@ -13,7 +13,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AlertDialog.Builder;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.bluecirclesquare.projecthelper2.R;
 import com.bluecirclesquare.projecthelper2.model.db.ProjectDatabase;
@@ -27,9 +26,9 @@ public class QuoteFragment extends DialogFragment {
 
   Quote fromDBQuote;
   View view;
-  
+
   public static QuoteFragment newInstance(Long quoteId) {
-    
+
     Bundle args = new Bundle();
     args.putLong("quoteId", quoteId);
     QuoteFragment fragment = new QuoteFragment();
@@ -47,26 +46,44 @@ public class QuoteFragment extends DialogFragment {
     builder.setPositiveButton("OK", (dialog, id) -> {
       if (fromDBQuote == null) {
         Quote quote = new Quote();
-        quote.setAddress(((TextInputEditText) view.findViewById(R.id.quote_id)).getText().toString());
-        quote.setAmount(Long.parseLong(((TextInputEditText) view.findViewById(R.id.amount)).getText().toString()));
-        quote.setContact(((TextInputEditText) view.findViewById(R.id.contact)).getText().toString());
-        quote.setDescription(((TextInputEditText) view.findViewById(R.id.description)).getText().toString());
+        quote.setAddress(
+            ((TextInputEditText) view.findViewById(R.id.address)).getText().toString());
+        quote.setAmount(Long.parseLong(
+            ((TextInputEditText) view.findViewById(R.id.amount)).getText().toString()));
+        quote
+            .setContact(((TextInputEditText) view.findViewById(R.id.contact)).getText().toString());
+        quote.setDescription(
+            ((TextInputEditText) view.findViewById(R.id.description)).getText().toString());
         quote.setEvent(new Date());
-        quote.setQuoteNumber(((TextInputEditText) view.findViewById(R.id.quote_number)).getText().toString());
-        new InsetQuote().execute(quote);
+        TextInputEditText quoteInput = view.findViewById(R.id.quote_number);
+        if (quoteInput.getText() != null && !quoteInput.getText().toString().trim().isEmpty()) {
+          quote.setQuoteNumber(quoteInput.getText().toString().trim());
+        }
+
+        new InsertQuote().execute(quote);
       } else {
-        fromDBQuote.setAddress(((TextInputEditText) view.findViewById(R.id.quote_id)).getText().toString());
-        fromDBQuote.setAmount(Long.parseLong(((TextInputEditText) view.findViewById(R.id.amount)).getText().toString()));
-        fromDBQuote.setContact(((TextInputEditText) view.findViewById(R.id.contact)).getText().toString());
-        fromDBQuote.setDescription(((TextInputEditText) view.findViewById(R.id.description)).getText().toString());
+        fromDBQuote.setAddress(
+            ((TextInputEditText) view.findViewById(R.id.address)).getText().toString());
+        TextInputEditText amountInput = view.findViewById(R.id.amount);
+        if (amountInput.getText() != null && !amountInput.getText().toString().trim().isEmpty()){
+          double amount = Double.parseDouble(amountInput.getText().toString().trim());
+          fromDBQuote.setAmount((long) (amount * 100));
+        }
+        fromDBQuote
+            .setContact(((TextInputEditText) view.findViewById(R.id.contact)).getText().toString());
+        fromDBQuote.setDescription(
+            ((TextInputEditText) view.findViewById(R.id.description)).getText().toString());
         fromDBQuote.setEvent(new Date());
-        fromDBQuote.setQuoteNumber(((TextInputEditText) view.findViewById(R.id.quote_number)).getText().toString());
+        fromDBQuote.setQuoteNumber(
+            ((TextInputEditText) view.findViewById(R.id.quote_number)).getText().toString());
         new UpdateQuote().execute(fromDBQuote);
       }
       dialog.dismiss();
     });
 
-    builder.setNegativeButton("CANCEL", (dialog, id) -> {dialog.dismiss();});
+    builder.setNegativeButton("CANCEL", (dialog, id) -> {
+      dialog.dismiss();
+    });
     return builder.create();
   }
 
@@ -79,7 +96,7 @@ public class QuoteFragment extends DialogFragment {
     }
   }
 
-  private class InsetQuote extends AsyncTask<Quote, Void, Void>{
+  private class InsertQuote extends AsyncTask<Quote, Void, Void> {
 
     @Override
     protected Void doInBackground(Quote... quotes) {
@@ -97,7 +114,7 @@ public class QuoteFragment extends DialogFragment {
     }
   }
 
-  private class GetQuote extends AsyncTask<Long, Void, Void>{
+  private class GetQuote extends AsyncTask<Long, Void, Void> {
 
     @Override
     protected Void doInBackground(Long... longs) {
@@ -113,13 +130,17 @@ public class QuoteFragment extends DialogFragment {
   }
 
   private void setQuote() {
-    ((TextInputEditText) view.findViewById(R.id.quote_id)).setText(Long.toString(fromDBQuote.getId()));
-    ((TextInputEditText) view.findViewById(R.id.quote_number)).setText(fromDBQuote.getQuoteNumber());
-    ((TextInputEditText) view.findViewById(R.id.amount)).setText(Long.toString(fromDBQuote.getAmount()));
+    ((TextInputEditText) view.findViewById(R.id.quote_id))
+        .setText(Long.toString(fromDBQuote.getId()));
+    ((TextInputEditText) view.findViewById(R.id.quote_number))
+        .setText(fromDBQuote.getQuoteNumber());
+    ((TextInputEditText) view.findViewById(R.id.amount))
+        .setText(Long.toString(fromDBQuote.getAmount()));
     ((TextInputEditText) view.findViewById(R.id.contact)).setText(fromDBQuote.getContact());
     ((TextInputEditText) view.findViewById(R.id.description)).setText(fromDBQuote.getDescription());
     if (fromDBQuote.getEvent() != null) {
-      ((TextInputEditText) view.findViewById(R.id.event)).setText(fromDBQuote.getEvent().toString());
+      ((TextInputEditText) view.findViewById(R.id.event))
+          .setText(fromDBQuote.getEvent().toString());
     } else {
       ((TextInputEditText) view.findViewById(R.id.event)).setText("");
     }

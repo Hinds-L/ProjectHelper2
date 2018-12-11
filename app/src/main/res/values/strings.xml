@@ -10,7 +10,6 @@
   <string name="job_list">Job List</string>
   <string name="job_date">Job Date</string>
   <string name="invoice_id_invoice">Invoice Id</string>
-  <string name="date_completed">Date Completed</string>
   <string name="invoice_job_description">Job Description</string>
   <string name="invoice_job_price">Price</string>
   <string name="invoice_price">Invoice Price</string>
@@ -30,6 +29,11 @@
   <string name="add_contact">Add Contact</string>
   <string name="enter_job_id">Job Id</string>
   <string name="enter_invoice_id">Enter Invoice Id</string>
+  <string name="date_completed">Date Completed</string>
+  <string name="enter_price">Enter Price</string>
+  <string name="job_number">Job Number</string>
+  <string name="enter_date">Enter Date</string>
+  <string name="enter_address">Enter Address</string>
 
 
 </resources>

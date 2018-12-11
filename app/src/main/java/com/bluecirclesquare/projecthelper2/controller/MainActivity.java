@@ -39,17 +39,17 @@ public class MainActivity extends AppCompatActivity implements
 
     /**
     *Allows user to write emails
-     */
+//     */
 //    FloatingActionButton emailButton = findViewById(R.id.create_email);
-//    emailButton.setOnClickListener(new View.OnClickListener(){
+//   emailButton.setOnClickListener(new View.OnClickListener(){
 
-//    @Override
-//    public void onClick(View view) {
-//      Snackbar.make(view, "Email", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-//    }
-//                                   }
-//    );
-  }
+   //@Override
+   //public void onClick(View view) {
+    // Snackbar.make(view, "Email", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+  //}
+                                 }
+ //  );
+ // }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
