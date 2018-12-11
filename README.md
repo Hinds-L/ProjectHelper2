@@ -61,8 +61,8 @@ I will be working on completing the Dialog fragments with their corresponding ja
 * [Javadoc HTML pages in your repository](docs/api)
 
  * Links to all applicable licenses.
-[https://github.com/facebook/stetho/blob/master/LICENSE](https://github.com/facebook/stetho/blob/master/LICENSE)
-[Link to Project Helper License](LICENSE.MD)
+    [https://github.com/facebook/stetho/blob/master/LICENSE](https://github.com/facebook/stetho/blob/master/LICENSE)
+    [Link to Project Helper License](https://github.com/Hinds-L/ProjectHelper2/blob/master/LICENSE)
 
 
 * [Instructions for building the app.](PHelperBIn.pdf)
