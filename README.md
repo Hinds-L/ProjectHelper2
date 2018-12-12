@@ -56,11 +56,14 @@ I will be working on completing the Dialog fragments with their corresponding ja
 
 
 * [PHERD](PHerd.pdf)
+
+
 * [PHDDL](ProjectHelper2ddl1.sql)
 
 * [Javadoc HTML pages in your repository](docs/api)
 
- * Links to all applicable licenses.
+
+* Links to all applicable licenses.
     [https://github.com/facebook/stetho/blob/master/LICENSE](https://github.com/facebook/stetho/blob/master/LICENSE)
     [Link to Project Helper License](https://github.com/Hinds-L/ProjectHelper2/blob/master/LICENSE)
 
