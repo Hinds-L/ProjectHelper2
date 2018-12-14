@@ -43,8 +43,8 @@ public class QuotesFragment extends Fragment {
     adapter = new QuoteViewAdapter(getActivity(), this.quotes);
     quotesView = view.findViewById(R.id.quotes_view);
     quotesView.setAdapter(adapter);
-    FloatingActionButton fab = view.findViewById(R.id.add_quote);
-    fab.setOnClickListener(new OnClickListener() {
+    FloatingActionButton fabQuote = view.findViewById(R.id.add_quote);
+    fabQuote.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
         QuoteFragment fragment = new QuoteFragment();
